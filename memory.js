@@ -5,7 +5,7 @@ class Memory {
     }
     
     // reserves a contiguous block of memory consisting of "size" 
-    // boxes which you can safely modify, returning a pointed to
+    // boxes which you can safely modify, returning a pointer to
     // the 1st box or null if the allocation fails
     allocate(size) {
       if (this.head + size > this.memory.length) {
@@ -35,7 +35,7 @@ class Memory {
         for (let i = 0; i < size; i++) {
           this.set(toIdx + i, this.get(fromIdx + i));
         }
-      } else {
+       } else {
         // Iterate backwards
         for (let i = size - 1; i >= 0; i--) {
           this.set(toIdx + i, this.get(fromIdx + i));
